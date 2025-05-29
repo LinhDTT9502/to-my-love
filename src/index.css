@@ -1,0 +1,29 @@
+
+@import "tailwindcss";
+
+@keyframes ribbon-float {
+  0% { transform: translateY(-100%) rotate(0deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(0) rotate(360deg); opacity: 1; }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.ribbon {
+  animation: ribbon-float 1.5s ease-out forwards;
+}
+
+.confetti {
+  animation: confetti-fall 3s linear forwards;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color, red);
+  border-radius: 50%;
+  top: 0;
+  left: var(--left, 50%);
+  opacity: 0;
+}
