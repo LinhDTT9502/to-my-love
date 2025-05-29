@@ -33,7 +33,7 @@ function Login() {
 
 const onSubmit = (data) => {
     const { userName, password } = data;
-    if (userName === "Aliff Irfhan" && password === "30051995") {
+    if (userName === "MYLOVE" && password === "30051995") {
         navigate("/home");
     } else {
         alert("Invalid username or password");
